@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+{% load static %}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -35,7 +36,7 @@
   <body>
     <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Jon Buscano</a>
+    <a class="navbar-brand" href="{% url 'home'%}">Jon Buscano</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -45,10 +46,10 @@
         <a class="nav-link" href="https://www.facebook.com/jon.h.buscano/">Facebook</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="https://drive.google.com/file/d/0B9ngAPyRH2XdelFRM1NIY0F6OEU/view?usp=sharing">Resume</a>
+        <a class="nav-link" href="{% static 'Resume_2019.pdf'%}">Resume</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Blog</a>
+        <a class="nav-link" href="{% url 'allblogs' %}">Blog</a>
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">About</a>
@@ -68,6 +69,7 @@
       <p>
         <a href="mailto:jhabuscano@gmail.com" class="btn btn-primary my-2">Email Me</a>
       </p>
+      <img src="{% static 'Jon.jpg'%}" height="200" width="200"/>
     </div>
   </section>
 
